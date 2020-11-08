@@ -1,35 +1,49 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-    state = {
-        count: 0,
-    };
-
-    styles = {
-        fontSize: 50,
-        fontWeight: "bold"
-    };
-
     render() {
-        let classes = this.getBadgeClasses();   
-    
-        return ( 
+    return (
         <div>
-            <span className={classes}>{this.formatCount()}</span>
-            <button className="btn btn-secondary btn-sm">Increment</button>
+        <section id="colorlib-hero" className="js-fullheight" data-section="home">
+            <div className="flexslider js-fullheight">
+                <ul className="slides">
+                <li style={{backgroundImage: 'url(images/img_bg_1.jpg)'}}>
+                    <div className="overlay" />
+                    <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                        <div className="slider-text-inner js-fullheight">
+                            <div className="desc">
+                            <h1>Hi! <br />I'm Hector</h1>
+                            
+                            <p><a className="btn btn-primary btn-learn">Download CV <em className="icon-download4" /></a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+                <li style={{backgroundImage: 'url(images/img_bg_2.jpg)'}}>
+                    <div className="overlay" />
+                    <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+                        <div className="slider-text-inner">
+                            <div className="desc">
+                            <h1>I am <br />a Programmer</h1>
+                            <p><a className="btn btn-primary btn-learn">View Portfolio <em className="icon-briefcase3" /></a></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </li>
+                </ul>
             </div>
-        );
-    }
-    getBadgeClasses() {
-        let classes = "badge m-2 badge-";
-        classes += (this.state.count === 0) ? "warning" : "primary";
-        return classes;
-    }
-
-    formatCount(){
-        const{count} = this.state;
-        return count === 0 ? 'Zero' : count;
-    }
+        </section>
+      </div>
+    );
+  }
 }
  
 export default Counter;
